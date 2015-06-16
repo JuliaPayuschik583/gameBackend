@@ -1,0 +1,43 @@
+
+spring:
+  datasource:
+    driverClassName: &dbDriver org.postgresql.Driver
+    url: &dbUrl jdbc:postgresql://localhost:5432/postgres
+    username: &dbUsername postgres
+    password: &dbPassword 11
+  jpa:
+    show-sql: true
+    hibernate:
+      ddlAuto: none
+    properties:
+      hibernate:
+        format_sql: true
+        cache:
+            region:
+              factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+            use_query_cache: false
+            use_second_level_cache: false
+        connection:
+          driver_class: *dbDriver
+          url: *dbUrl
+          username: *dbUsername
+          password: *dbPassword
+          provider_class: org.hibernate.c3p0.internal.C3P0ConnectionProvider
+          release_mode: after_transaction
+        c3p0:
+          min_size: 5
+          max_size: 20
+          timeout: 300
+          max_statements: 50
+          idle_test_period: 3000
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+        temp:
+          use_jdbc_metadata_defaults: false
+        current_session_context_class: thread
+
+logging:
+  level.: DEBUG
+  level.org.hibernate: INFO
+  level.org.springframework: INFO
+  level.org.apache.cxf: INFO
+  level.com.mchange: 'OFF'
