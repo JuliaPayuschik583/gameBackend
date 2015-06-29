@@ -12,17 +12,17 @@ spring:
     properties:
       hibernate:
         format_sql: true
-        cache:
-            region:
-              factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
-            use_query_cache: false
-            use_second_level_cache: false
+#        cache:
+#            region:
+#              factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+#            use_query_cache: false
+#            use_second_level_cache: false
         connection:
           driver_class: *dbDriver
           url: *dbUrl
           username: *dbUsername
           password: *dbPassword
-          provider_class: org.hibernate.c3p0.internal.C3P0ConnectionProvider
+#          provider_class: org.hibernate.c3p0.internal.C3P0ConnectionProvider
           release_mode: after_transaction
         c3p0:
           min_size: 5
