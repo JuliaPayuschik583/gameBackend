@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b715a80c-a739-4d66-920b-26a4cfa1278d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_el_javax_el_api_3_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_glassfish_web_javax_el_2_2_6.xml" />
-      <change type="DELETED" beforePath="D:\backend_projects\backendGame\.idea\libraries\Gradle__com_fasterxml_jackson_core_jackson_annotations_2_3_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\backend_projects\backendGame\.idea\libraries\Gradle__com_fasterxml_jackson_core_jackson_databind_2_3_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\backend_projects\backendGame\.idea\libraries\Gradle__nz_net_ultraq_thymeleaf_thymeleaf_layout_dialect_1_2_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\backend_projects\backendGame\.idea\libraries\Gradle__ognl_ognl_3_0_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\backend_projects\backendGame\.idea\libraries\Gradle__org_apache_tomcat_embed_tomcat_embed_core_7_0_55.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\backend_projects\backendGame\.idea\libraries\Gradle__org_apache_tomcat_embed_tomcat_embed_el_7_0_55.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\backend_projects\backendGame\.idea\libraries\Gradle__org_apache_tomcat_embed_tomcat_embed_logging_juli_7_0_55.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\backend_projects\backendGame\.idea\libraries\Gradle__org_springframework_boot_spring_boot_starter_thymeleaf_1_1_8_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\backend_projects\backendGame\.idea\libraries\Gradle__org_springframework_boot_spring_boot_starter_tomcat_1_1_8_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\backend_projects\backendGame\.idea\libraries\Gradle__org_springframework_boot_spring_boot_starter_web_1_1_8_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\backend_projects\backendGame\.idea\libraries\Gradle__org_springframework_spring_webmvc_4_0_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\backend_projects\backendGame\.idea\libraries\Gradle__org_thymeleaf_thymeleaf_2_1_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\backend_projects\backendGame\.idea\libraries\Gradle__org_thymeleaf_thymeleaf_spring4_2_1_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\backend_projects\backendGame\.idea\libraries\Gradle__org_unbescape_unbescape_1_0.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/build/classes/main/game/tictactoe/repository/UserRepository.class" afterPath="$PROJECT_DIR$/backend/build/classes/main/game/tictactoe/repository/UserRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/game/tictactoe/repository/UserRepository.java" afterPath="$PROJECT_DIR$/backend/src/main/java/game/tictactoe/repository/UserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/build/resources/main/application.yml" afterPath="$PROJECT_DIR$/backend/build/resources/main/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/backend.iml" afterPath="$PROJECT_DIR$/backend/backend.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/build.gradle" afterPath="$PROJECT_DIR$/backend/build.gradle" />
+    <list default="true" id="b715a80c-a739-4d66-920b-26a4cfa1278d" name="Default" comment="updated">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="backendGame.iws" />
@@ -141,8 +119,8 @@
       <file leaf-file-name="application.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.53968257">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.12878788">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -1503,7 +1481,7 @@
       <workItem from="1434402832784" duration="1353000" />
       <workItem from="1434486057675" duration="5688000" />
       <workItem from="1435420968948" duration="1483000" />
-      <workItem from="1435585879390" duration="5739000" />
+      <workItem from="1435585879390" duration="6797000" />
     </task>
     <task id="LOCAL-00001" summary="updated">
       <created>1435422762691</created>
@@ -1523,15 +1501,21 @@
       <option name="project" value="LOCAL" />
       <updated>1435589801763</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="updated">
+      <created>1435591675382</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1435591675382</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24556000" />
+    <option name="totallyTimeSpent" value="25614000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1541,7 +1525,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6303237" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5025554" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -2056,8 +2040,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.53968257">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.12878788">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
           <folding />
         </state>
       </provider>
