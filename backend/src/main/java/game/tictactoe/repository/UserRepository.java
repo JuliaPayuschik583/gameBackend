@@ -10,10 +10,10 @@ import org.springframework.data.repository.query.Param;
  */
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    @Query(value = "FROM Users WHERE login = :login AND password = :password AND email = :email")
+    @Query(value = "FROM User WHERE login = :login AND password = :password AND email = :email")
     public User confirmUser(@Param("login") String login, @Param("password") String password,
                                @Param("email") String email);
 
-    @Query(value = "FROM Users WHERE login = :login AND password = :password")
+    @Query(value = "FROM User WHERE login = :login AND password = :password")
     public User findByLoginAndPassword(@Param("login") String login, @Param("password") String password);
 }
