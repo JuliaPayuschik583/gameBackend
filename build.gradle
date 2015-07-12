@@ -1,14 +1,38 @@
-group 'backendGame'
-version '1.0-SNAPSHOT'
-
 apply plugin: 'java'
+apply plugin: 'war'
 
-sourceCompatibility = 1.5
+subprojects {
+    apply plugin: 'java'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        testCompile 'junit:junit:4.12'
+        testCompile 'org.mockito:mockito-all:1.9.5'
+    }
+}
+
+buildscript {
+    ext {
+        springBootVersion = '1.2.4.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
+    }
+}
 
 repositories {
     mavenCentral()
 }
 
+war {
+    archiveName = 'backend.war'
+}
+
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile project(':backend')
+    //testCompile group: 'junit', name: 'junit', version: '4.11'
 }

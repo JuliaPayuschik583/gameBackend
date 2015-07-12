@@ -18,9 +18,9 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/greeting")
-    public String test(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", name);
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    public String test() {
+        //model.addAttribute("name", name);
         return "greeting";
     }
 
