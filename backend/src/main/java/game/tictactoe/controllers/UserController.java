@@ -5,9 +5,7 @@ import game.tictactoe.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author julia
@@ -18,10 +16,14 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/test", method = RequestMethod.GET)
-    public String test() {
+    @RequestMapping(value = "/test", method = RequestMethod.POST)
+    public @ResponseBody User test(@RequestBody User user) {
         //model.addAttribute("name", name);
-        return "greeting";
+        User user1 = new User();
+        user1.setId(1L);
+        user1.setLogin("Admin");
+        user1.setPassword("123J");
+        return user1;
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
