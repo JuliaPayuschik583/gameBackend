@@ -25,8 +25,9 @@ public class UserService {
         return user != null;
     }
 
-    public User findByLoginAndPassword(String login, String password) {
-        return userRepository.findByLoginAndPassword(login, password);
+    public boolean authUser(String login, String password) {
+        User user = userRepository.findByLoginAndPassword(login, password);
+        return true;
     }
 
     public void delete(long id) {
