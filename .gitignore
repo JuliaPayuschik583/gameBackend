@@ -4,6 +4,6 @@ build/
 
 .idea/
 
-.idea/*.xml
+.idea/workspace.xml
 
 *.iml
