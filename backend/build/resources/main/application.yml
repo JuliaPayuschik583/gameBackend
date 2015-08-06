@@ -8,7 +8,7 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-      ddlAuto: create
+      ddlAuto: validate
     properties:
       hibernate:
         format_sql: true

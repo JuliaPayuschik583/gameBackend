@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Import;
  */
 @ComponentScan
 @EnableAutoConfiguration
-@Import({DatabaseConfig.class, AppSecurityConfig.class})
+@Import({DatabaseConfig.class})//, AppSecurityConfig.class})
 public class Application {
 
     public static void main(String[] args) {

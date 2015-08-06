@@ -16,8 +16,9 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public User addUser(User user) {
-        return userRepository.save(user);
+    public boolean addUser(User user) {
+        User savedUser = userRepository.save(user);
+        return savedUser != null && savedUser.getId() != null;
     }
 
     public boolean confirmUser(String login, String password, String email) {
@@ -27,14 +28,14 @@ public class UserService {
 
     public boolean authUser(String login, String password) {
         User user = userRepository.findByLoginAndPassword(login, password);
-        return true;
+        return user != null;
     }
 
     public void delete(long id) {
         userRepository.delete(id);
     }
 
-    public User editBank(User user) {
+    public User editUser(User user) {
         return userRepository.saveAndFlush(user);
     }
 

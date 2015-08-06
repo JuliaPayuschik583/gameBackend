@@ -22,7 +22,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/protected", method = RequestMethod.POST)
+    @RequestMapping(value = "/test", method = RequestMethod.POST)
     public @ResponseBody User test(@RequestBody User user) {
         //model.addAttribute("name", name);
         User user1 = new User();
@@ -33,18 +33,15 @@ public class UserController {
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
-    public Boolean registration(@NotEmpty @FormParam("login") String login,
+    public @ResponseBody Boolean registration(@NotEmpty @FormParam("login") String login,
                                 @NotEmpty @FormParam("password") String password,
                                 @Email(canBeNullOrEmpty = true) @FormParam("email") String email) {
-        if(!userService.confirmUser(login, password, email)) {
-            userService.addUser(new User(login, password, email));
-            return true;
-        }
-        return false;
+        return !userService.confirmUser(login, password, email)
+                && userService.addUser(new User(login, password, email));
     }
 
     @RequestMapping(value = "/auth", method = RequestMethod.POST)
-    public Boolean authUser(@NotEmpty @FormParam("login") String login,
+    public @ResponseBody Boolean authUser(@NotEmpty @FormParam("login") String login,
                             @NotEmpty @FormParam("password") String password) {
         return userService.authUser(login, password);
     }
