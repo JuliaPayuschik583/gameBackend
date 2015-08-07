@@ -30,7 +30,8 @@ public @interface JustTwoUsers {
 
         @Override
         public boolean isValid(final List<User> users, final ConstraintValidatorContext constraintValidatorContext) {
-            if (users == null || users.isEmpty() || users.size() != amountOfusers) {
+            if (users == null || users.isEmpty() || users.size() != amountOfusers
+                    || users.get(0) == null || users.get(1) == null || users.get(0).equals(users.get(1))) {
                 return false;
             }
             for (User user : users) {

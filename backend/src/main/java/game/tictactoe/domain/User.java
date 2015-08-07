@@ -24,7 +24,7 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "email", nullable = false)
+    @Column(name = "email", nullable = true)
     private String email;
 
     public User() {
@@ -66,5 +66,26 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        User user = (User) o;
+
+        return user.getLogin() != null && !user.getLogin().isEmpty() && user.getLogin().equals(this.getLogin())
+                && user.getPassword() != null && !user.getPassword().isEmpty()
+                && user.getPassword().equals(this.getPassword());
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 31 + (idSession != null ? idSession.hashCode() : 0);
+        result = 31 * result + (login != null ? login.hashCode() : 0);
+        result = 31 * result + (password != null ? password.hashCode() : 0);
+        return result;
     }
 }

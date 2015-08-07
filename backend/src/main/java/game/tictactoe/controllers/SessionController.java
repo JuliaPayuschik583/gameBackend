@@ -28,7 +28,7 @@ public class SessionController {
     private SessionService sessionService;
 
     @RequestMapping(value = "/startMatch", method = RequestMethod.POST)
-    public @ResponseBody Boolean startMatch(@RequestBody @JustTwoUsers List<User> userList) {
+    public @ResponseBody Boolean startMatch(@JustTwoUsers @RequestBody List<User> userList) {
         logger.debug("method startMatch with params userList = " + userList);
         Session session = new Session();
         session.setUsers(userList);

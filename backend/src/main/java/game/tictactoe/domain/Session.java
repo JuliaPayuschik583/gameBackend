@@ -24,7 +24,7 @@ public class Session {
     private List<User> users;//users of this session
 
     @OneToOne
-    @Column(name = "userIsWin", nullable = false)
+    @JoinColumn(name = "userIsWin", nullable = true)
     private User userIsWin;//id of user
 
     public Long getId() {
