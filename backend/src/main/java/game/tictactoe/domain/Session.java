@@ -21,5 +21,5 @@ public class Session {
     private Date date;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "idSession")
-    private List<Player> players;//players of this user
+    private List<Player> players;//players of this session
 }
