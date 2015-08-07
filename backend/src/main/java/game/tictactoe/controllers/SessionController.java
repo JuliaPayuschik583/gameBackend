@@ -1,16 +1,20 @@
 package game.tictactoe.controllers;
 
+import game.tictactoe.domain.Session;
 import game.tictactoe.domain.User;
-import game.tictactoe.requests.StartMatchRequest;
+import game.tictactoe.requests.ResultMatchRequest;
+import game.tictactoe.service.SessionService;
+import game.tictactoe.validate.JustTwoUsers;
+import org.apache.log4j.Logger;
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.validation.constraints.NotNull;
-import javax.ws.rs.FormParam;
-import java.util.Map;
+import java.util.List;
 
 /**
  * @author julia
@@ -18,14 +22,23 @@ import java.util.Map;
 @Controller
 public class SessionController {
 
-    @RequestMapping(value = "/startMatch", method = RequestMethod.POST)
-    public String startMatch(@RequestBody @NotNull StartMatchRequest startMatchRequest) {
+    private static final Logger logger = Logger.getLogger(UserController.class);
 
-        return null;
+    @Autowired
+    private SessionService sessionService;
+
+    @RequestMapping(value = "/startMatch", method = RequestMethod.POST)
+    public @ResponseBody Boolean startMatch(@RequestBody @JustTwoUsers List<User> userList) {
+        logger.debug("method startMatch with params userList = " + userList);
+        Session session = new Session();
+        session.setUsers(userList);
+        return sessionService.addSession(session);
     }
 
     @RequestMapping(value = "/resultMatch", method = RequestMethod.POST)
-    public String resultMatch(@NotEmpty @FormParam("sessionId") Long sessionId, @RequestBody Map<User, Boolean> userMap) {
-        return null;
+    public @ResponseBody Boolean resultMatch(@RequestBody @NotEmpty ResultMatchRequest resultMatchRequest) {
+        logger.debug("method startMatch with params resultMatchRequest = " + resultMatchRequest);
+        return sessionService.setUserWinToSession(resultMatchRequest.getSessionId(),
+                resultMatchRequest.getUserIsWin());
     }
 }

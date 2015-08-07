@@ -21,5 +21,41 @@ public class Session {
     private Date date;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "idSession")
-    private List<Player> players;//players of this session
+    private List<User> users;//users of this session
+
+    @OneToOne
+    @Column(name = "userIsWin", nullable = false)
+    private User userIsWin;//id of user
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
+
+    public User getUserIsWin() {
+        return userIsWin;
+    }
+
+    public void setUserIsWin(User userIsWin) {
+        this.userIsWin = userIsWin;
+    }
 }

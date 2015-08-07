@@ -1,7 +1,6 @@
 package game.tictactoe.domain;
 
 import javax.persistence.*;
-import java.util.List;
 
 /**
  * @author julia
@@ -15,8 +14,9 @@ public class User {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "idUser")
-    private List<Player> players;//players of this user
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name= "idSession")//name column
+    private Session idSession;//FK idSession
 
     @Column(name = "login", nullable = false)
     private String login;
@@ -42,14 +42,6 @@ public class User {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public List<Player> getPlayers() {
-        return players;
-    }
-
-    public void setPlayers(List<Player> players) {
-        this.players = players;
     }
 
     public String getLogin() {
