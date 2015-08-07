@@ -7,28 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b715a80c-a739-4d66-920b-26a4cfa1278d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_boot_spring_boot_starter_security_1_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_security_spring_security_config_3_2_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_security_spring_security_core_3_2_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_springframework_security_spring_security_web_3_2_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/build/classes/main/game/tictactoe/domain/Player.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/build/classes/main/game/tictactoe/repository/PlayerRepository.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/build/classes/main/game/tictactoe/Application.class" afterPath="$PROJECT_DIR$/backend/build/classes/main/game/tictactoe/Application.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/build/classes/main/game/tictactoe/domain/Session.class" afterPath="$PROJECT_DIR$/backend/build/classes/main/game/tictactoe/domain/Session.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/build/classes/main/game/tictactoe/controllers/SessionController.class" afterPath="$PROJECT_DIR$/backend/build/classes/main/game/tictactoe/controllers/SessionController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/build/classes/main/game/tictactoe/domain/User.class" afterPath="$PROJECT_DIR$/backend/build/classes/main/game/tictactoe/domain/User.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/build/classes/main/game/tictactoe/controllers/UserController.class" afterPath="$PROJECT_DIR$/backend/build/classes/main/game/tictactoe/controllers/UserController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/build/classes/main/game/tictactoe/service/UserService.class" afterPath="$PROJECT_DIR$/backend/build/classes/main/game/tictactoe/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/game/tictactoe/validate/JustTwoUsers.java" afterPath="$PROJECT_DIR$/backend/src/main/java/game/tictactoe/validate/JustTwoUsers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/game/tictactoe/security/SecurityInit.java" afterPath="$PROJECT_DIR$/backend/src/main/java/game/tictactoe/security/SecurityInit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/game/tictactoe/domain/Session.java" afterPath="$PROJECT_DIR$/backend/src/main/java/game/tictactoe/domain/Session.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/game/tictactoe/controllers/SessionController.java" afterPath="$PROJECT_DIR$/backend/src/main/java/game/tictactoe/controllers/SessionController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/game/tictactoe/domain/User.java" afterPath="$PROJECT_DIR$/backend/src/main/java/game/tictactoe/domain/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/game/tictactoe/controllers/UserController.java" afterPath="$PROJECT_DIR$/backend/src/main/java/game/tictactoe/controllers/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/game/tictactoe/service/UserService.java" afterPath="$PROJECT_DIR$/backend/src/main/java/game/tictactoe/service/UserService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/build/resources/main/application.yml" afterPath="$PROJECT_DIR$/backend/build/resources/main/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/backend.iml" afterPath="$PROJECT_DIR$/backend/backend.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/build.gradle" afterPath="$PROJECT_DIR$/backend/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="backendGame.iws" />
@@ -91,8 +76,8 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/src/main/java/game/tictactoe/controllers/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.02538071">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.1573604">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1175#1181#0" expanded="true" />
@@ -1506,7 +1491,7 @@
       <workItem from="1438869804317" duration="882000" />
       <workItem from="1438889321984" duration="3691000" />
       <workItem from="1438935514834" duration="717000" />
-      <workItem from="1438941198216" duration="12210000" />
+      <workItem from="1438941198216" duration="12527000" />
     </task>
     <task id="LOCAL-00001" summary="updated">
       <created>1435422762691</created>
@@ -1610,11 +1595,17 @@
       <option name="project" value="LOCAL" />
       <updated>1438958970992</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="updated">
+      <created>1438963224256</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1438963224256</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62380000" />
+    <option name="totallyTimeSpent" value="62697000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-4" width="1368" height="773" extended-state="6" />
@@ -1662,13 +1653,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated" />
     <MESSAGE value="added test with json request and json response" />
     <MESSAGE value="updated - added spring security and use annotation for validate" />
     <MESSAGE value="updated session controller" />
     <MESSAGE value="deleted entity Player, field isWin moves to Session entity. Add changed to Session Controller, and created Session Service" />
     <MESSAGE value="without spring security" />
-    <option name="LAST_COMMIT_MESSAGE" value="without spring security" />
+    <MESSAGE value="updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2208,8 +2199,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/game/tictactoe/controllers/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02538071">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.1573604">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1175#1181#0" expanded="true" />
