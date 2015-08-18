@@ -3,7 +3,6 @@ package game.tictactoe.validate;
 import javax.validation.Constraint;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
-import javax.validation.Payload;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -17,14 +16,8 @@ import java.lang.annotation.Target;
 @Constraint(validatedBy = {Email.Validator.class})
 public @interface Email {
 
-    static final String REGEXP_EMAIL = "^[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*@" +
+    String REGEXP_EMAIL = "^[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*@" +
             "(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?$";
-
-    String message() default "";
-
-    Class<?>[] groups() default {};
-
-    Class<? extends Payload>[] payload() default {};
 
     boolean canBeNullOrEmpty() default false;
 
