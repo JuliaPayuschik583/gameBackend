@@ -3,6 +3,7 @@ package game.tictactoe.validate;
 import javax.validation.Constraint;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
+import javax.validation.Payload;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -20,6 +21,10 @@ public @interface Email {
             "(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?$";
 
     boolean canBeNullOrEmpty() default false;
+
+    String message() default "wrong email!"; // default error message
+    Class<?>[] groups() default {};
+    Class<? extends Payload>[] payload() default {};
 
     class Validator implements ConstraintValidator<Email, String> {
         private boolean canBeNullOrEmpty;
