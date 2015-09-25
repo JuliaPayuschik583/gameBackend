@@ -1,6 +1,7 @@
 package game.tictactoe.domain;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * @author julia
@@ -11,12 +12,15 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
+    @Column(name = "user_id", unique = true, nullable = false)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name= "idSession")//name column
-    private Session idSession;//FK idSession
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "user_session", joinColumns = {
+            @JoinColumn(name = "user_id", nullable = false, updatable = false) },
+            inverseJoinColumns = { @JoinColumn(name = "session_id",
+                    nullable = false, updatable = false) })
+    private List<Session> sessions;//sessions of this user
 
     @Column(name = "login", nullable = false)
     private String login;
@@ -68,6 +72,14 @@ public class User {
         this.email = email;
     }
 
+    public List<Session> getSessions() {
+        return sessions;
+    }
+
+    public void setSessions(List<Session> sessions) {
+        this.sessions = sessions;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -83,9 +95,11 @@ public class User {
 
     @Override
     public int hashCode() {
-        int result = 31 + (idSession != null ? idSession.hashCode() : 0);
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (sessions != null ? sessions.hashCode() : 0);
         result = 31 * result + (login != null ? login.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
         return result;
     }
 }

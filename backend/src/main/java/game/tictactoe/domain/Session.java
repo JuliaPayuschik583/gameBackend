@@ -13,18 +13,18 @@ public class Session {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
+    @Column(name = "session_id", unique = true, nullable = false)
     private Long id;
 
     @Column(name = "date", nullable = false)
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date date;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "idSession")
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "sessions")
     private List<User> users;//users of this session
 
     @OneToOne
-    @JoinColumn(name = "userIsWin", nullable = true)
+    @JoinColumn(name = "user_is_win", nullable = true)
     private User userIsWin;//id of user
 
     public Long getId() {

@@ -14,6 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -22,23 +25,55 @@ import java.util.List;
 @Controller
 public class SessionController {
 
-    private static final Logger logger = Logger.getLogger(UserController.class);
+    private static final Logger logger = Logger.getLogger(SessionController.class);
 
     @Autowired
     private SessionService sessionService;
 
     @RequestMapping(value = "/startMatch", method = RequestMethod.POST)
-    public @ResponseBody Boolean startMatch(@JustTwoUsers @RequestBody List<User> userList) {
-        logger.debug("method startMatch with params userList = " + userList);
+    public @ResponseBody Boolean startMatch(@Valid @RequestBody Starter starter) {
+        logger.debug("method startMatch with params userList = " + starter.getUserList());
         Session session = new Session();
-        session.setUsers(userList);
+        session.setDate(new Date());
+        session.setUsers(starter.getUserList());
         return sessionService.addSession(session);
     }
 
     @RequestMapping(value = "/resultMatch", method = RequestMethod.POST)
-    public @ResponseBody Boolean resultMatch(@RequestBody @NotEmpty ResultMatchRequest resultMatchRequest) {
-        logger.debug("method startMatch with params resultMatchRequest = " + resultMatchRequest);
-        return sessionService.setUserWinToSession(resultMatchRequest.getSessionId(),
-                resultMatchRequest.getUserIsWin());
+    public @ResponseBody Boolean resultMatch(@Valid @RequestBody Result result) {
+        logger.debug("method startMatch with params resultMatchRequest = " + result.getResultMatchRequest());
+        return sessionService.setUserWinToSession(result.getResultMatchRequest().getSessionId(),
+                result.getResultMatchRequest().getUserIsWin());
+    }
+
+    static class Starter {
+        @JustTwoUsers
+        private List<User> userList;
+
+        public Starter() {
+        }
+
+        public List<User> getUserList() {
+            return userList;
+        }
+
+        public void setUserList(List<User> userList) {
+            this.userList = userList;
+        }
+    }
+
+    static class Result {
+        @NotEmpty ResultMatchRequest resultMatchRequest;
+
+        public Result() {
+        }
+
+        public ResultMatchRequest getResultMatchRequest() {
+            return resultMatchRequest;
+        }
+
+        public void setResultMatchRequest(ResultMatchRequest resultMatchRequest) {
+            this.resultMatchRequest = resultMatchRequest;
+        }
     }
 }
